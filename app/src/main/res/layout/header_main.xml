@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/demo_image"
+        android:scaleType="centerCrop"
+        android:id="@+id/pro_img"/>
+
+    <com.example.rezwan.letsmakeithappen.BlurView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/blurView"
+        app:blurRadius="4"
+        app:downSampleFactor="3"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Umle Do Fomas"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:id="@+id/name_tv"
+            android:transitionName="test2"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:rating="3.5"
+            android:transitionName="test3"/>
+
+        <TextView
+            android:id="@+id/loc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/14, Iqbal Road, Mohammadpur"
+            android:transitionName="test4"/>
+
+    </LinearLayout>
+</RelativeLayout>
+</FrameLayout>

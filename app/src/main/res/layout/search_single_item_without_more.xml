@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    card_view:cardCornerRadius="8dp"
+    android:layout_margin="5dp"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:animateLayoutChanges="true">
+        <com.example.rezwan.letsmakeithappen.RoundedImage
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/demo_image"
+            android:id="@+id/pro_img"
+            android:visibility="visible"
+            app:border_color="@android:color/background_dark"
+            app:border_width="0.1dp"
+            app:layout_behavior="com.ringid.customviews.AvatarImageBehavior"
+            android:layout_centerVertical="true"
+            android:transitionName="test1"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/pro_img"
+            android:layout_centerVertical="true"
+            android:id="@+id/nameView"
+            android:layout_marginLeft="16dp"
+            android:animateLayoutChanges="true">
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tasty Tummy"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                 android:transitionName="test2"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="4dp">
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="3.5"
+                    android:transitionName="test3"/>
+                <TextView
+                    android:id="@+id/id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="420 reviews"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/loc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gulshan"
+                android:textSize="13sp"
+                android:transitionName="test4"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</android.support.v7.widget.CardView>
